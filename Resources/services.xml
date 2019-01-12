@@ -4,8 +4,7 @@
            xsi:schemaLocation="http://symfony.com/schema/dic/services http://symfony.com/schema/dic/services/services-1.0.xsd">
     <services>
 
-        <!-- Register Theme subscriber -->
-        <service class="SpLazyLoad\Subscriber\Theme" id="sp_lazy_load.subscriber.theme">
+        <service class="SpLazyLoad\Subscriber\TemplateRegistration" id="sp_lazy_load.subscriber.template_registration">
             <argument>%sp_lazy_load.plugin_dir%</argument>
             <tag name="shopware.event_subscriber"/>
         </service>
