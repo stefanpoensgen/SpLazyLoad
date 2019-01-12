@@ -6,6 +6,8 @@
 
         <service class="SpLazyLoad\Subscriber\TemplateRegistration" id="sp_lazy_load.subscriber.template_registration">
             <argument>%sp_lazy_load.plugin_dir%</argument>
+            <argument>%sp_lazy_load.plugin_name%</argument>
+            <argument type="service" id="shopware.plugin.cached_config_reader"/>
             <tag name="shopware.event_subscriber"/>
         </service>
 

@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:noNamespaceSchemaLocation="../../../../engine/Shopware/Components/Plugin/schema/config.xsd">
+    <elements>
+        <element type="textarea">
+            <name>lazySizesConfig</name>
+            <label lang="de">lazySizes Konfiguration</label>
+            <label lang="en">lazySizes Config</label>
+            <description lang="de">Eingaben werden als JavaScript Datei mit in das Template kompiliert.</description>
+            <description lang="en">Inputs are compiled as a JavaScript file into the template.</description>
+        </element>
+
+        <element type="button">
+            <name>Doku</name>
+            <label lang="de">lazySizes Dokumentation</label>
+            <label lang="en">lazySizes Documentation</label>
+            <options>
+                <handler>
+                    <![CDATA[
+                    function(button) {
+                        window.open("https://github.com/aFarkas/lazysizes#js-api---options");
+                    }
+                    ]]>
+                </handler>
+            </options>
+        </element>
+    </elements>
+</config>

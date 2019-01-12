@@ -3,8 +3,11 @@
 Simple integration of [lazysizes](https://github.com/aFarkas/lazysizes) into Shopware
 
 ## Installation
-* Checkout Plugin in `/custom/plugins/SpLazyLoad`
-* Install the Plugin with the Plugin Manager
+* Checkout plugin in `/custom/plugins/SpLazyLoad`
+* Install the plugin with the plugin manager
+* If needed set lazysizes config in plugin config
+
+![Settings](https://i.imgur.com/HBJZ1TO.png)
 
 ## Contributing
 
