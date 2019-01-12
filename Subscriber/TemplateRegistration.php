@@ -2,10 +2,10 @@
 
 namespace SpLazyLoad\Subscriber;
 
-use Enlight\Event\SubscriberInterface;
 use Doctrine\Common\Collections\ArrayCollection;
+use Enlight\Event\SubscriberInterface;
 
-class Theme implements SubscriberInterface
+class TemplateRegistration implements SubscriberInterface
 {
     /**
      * @var string
@@ -14,6 +14,7 @@ class Theme implements SubscriberInterface
 
     /**
      * Theme constructor.
+     *
      * @param $pluginDir
      */
     public function __construct($pluginDir)
@@ -28,7 +29,7 @@ class Theme implements SubscriberInterface
     {
         return [
             'Theme_Inheritance_Template_Directories_Collected' => 'onTemplateDirectoriesCollect',
-            'Theme_Compiler_Collect_Plugin_Javascript' => 'onAddJavascriptFiles'
+            'Theme_Compiler_Collect_Plugin_Javascript' => 'onAddJavascriptFiles',
         ];
     }
 
@@ -49,10 +50,9 @@ class Theme implements SubscriberInterface
     public function onAddJavascriptFiles()
     {
         $jsFiles = [
-            $this->pluginDir . '/Resources/views/frontend/_public/vendor/lazysizes/lazysizes.min.js'
+            $this->pluginDir . '/vendor/lazysizes/lazysizes.min.js',
         ];
 
         return new ArrayCollection($jsFiles);
     }
-
 }
