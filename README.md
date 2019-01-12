@@ -5,7 +5,8 @@ Simple integration of [lazysizes](https://github.com/aFarkas/lazysizes) into Sho
 ## Installation
 * Checkout plugin in `/custom/plugins/SpLazyLoad`
 * Install the plugin with the plugin manager
-* If needed set lazysizes config in plugin config
+* If needed set lazysizes config in the plugin config
+* Compile theme each time you update the plugin config
 
 ![Settings](https://i.imgur.com/HBJZ1TO.png)
 
