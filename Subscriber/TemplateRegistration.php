@@ -4,7 +4,6 @@ namespace SpLazyLoad\Subscriber;
 
 use Doctrine\Common\Collections\ArrayCollection;
 use Enlight\Event\SubscriberInterface;
-use Shopware\Components\Plugin\CachedConfigReader;
 
 class TemplateRegistration implements SubscriberInterface
 {
@@ -14,27 +13,20 @@ class TemplateRegistration implements SubscriberInterface
     private $pluginDir;
 
     /**
-     * @var string
+     * @var array
      */
-    private $pluginName;
-
-    /**
-     * @var CachedConfigReader
-     */
-    private $config;
+    private $pluginConfig;
 
     /**
      * TemplateRegistration constructor.
      *
-     * @param string             $pluginDir
-     * @param string             $pluginName
-     * @param CachedConfigReader $config
+     * @param string $pluginDir
+     * @param array  $pluginConfig
      */
-    public function __construct($pluginDir, $pluginName, CachedConfigReader $config)
+    public function __construct(string $pluginDir, array $pluginConfig)
     {
         $this->pluginDir = $pluginDir;
-        $this->pluginName = $pluginName;
-        $this->config = $config->getByPluginName($pluginName);
+        $this->pluginConfig = $pluginConfig;
     }
 
     /**
@@ -66,7 +58,6 @@ class TemplateRegistration implements SubscriberInterface
     {
         $jsFiles = [
             $this->prepareJavaScript(),
-            $this->pluginDir . '/vendor/lazysizes/lazysizes.min.js',
         ];
 
         return new ArrayCollection($jsFiles);
@@ -77,9 +68,9 @@ class TemplateRegistration implements SubscriberInterface
      */
     public function prepareJavaScript()
     {
-        $filename = $this->pluginDir . '/Resources/views/frontend/_public/src/js/lazySizesConfig.js';
+        $filename = $this->pluginDir . '/Resources/frontend/js/lazySizesConfig.js';
 
-        file_put_contents($filename, $this->config['lazySizesConfig']);
+        file_put_contents($filename, $this->pluginConfig['lazySizesConfig']);
 
         return $filename;
     }
