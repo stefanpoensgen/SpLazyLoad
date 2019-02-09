@@ -1,0 +1,15 @@
+parameters:
+    level: 7
+
+    autoload_directories:
+        - %currentWorkingDirectory%/../../../var/cache
+        - %currentWorkingDirectory%/../../../engine/Library
+        - %currentWorkingDirectory%
+
+    autoload_files:
+        - %currentWorkingDirectory%/../../../autoload.php
+
+    paths:
+        - %currentWorkingDirectory%
+
+    reportUnmatchedIgnoredErrors: false
