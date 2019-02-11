@@ -1,0 +1,13 @@
+{
+    "name": "stefanpoensgen/sp-lazy-load",
+    "keywords": ["shopware", "shopware-plugin"],
+    "description": "Simple integration of lazysizes into Shopware",
+    "license": "MIT",
+    "type": "shopware-plugin",
+    "extra": {
+        "installer-name": "SpLazyLoad"
+    },
+    "require": {
+        "composer/installers": "~1.0"
+    }
+}
