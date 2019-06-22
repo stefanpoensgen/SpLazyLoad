@@ -12,6 +12,7 @@
         <service class="SpLazyLoad\Subscriber\TemplateRegistration" id="sp_lazy_load.subscriber.template_registration">
             <argument>%sp_lazy_load.plugin_dir%</argument>
             <argument type="service" id="sp_lazy_load.config"/>
+            <argument type="service" id="shopware_plugininstaller.plugin_manager"/>
             <tag name="shopware.event_subscriber"/>
         </service>
 

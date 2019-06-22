@@ -10,13 +10,11 @@ class SpLazyLoad extends Plugin
 {
     public function activate(ActivateContext $activateContext)
     {
-        // on plugin activation clear the cache
         $activateContext->scheduleClearCache(ActivateContext::CACHE_LIST_ALL);
     }
 
     public function deactivate(DeactivateContext $deactivateContext)
     {
-        // on plugin deactivation clear the cache
         $deactivateContext->scheduleClearCache(DeactivateContext::CACHE_LIST_ALL);
     }
 }

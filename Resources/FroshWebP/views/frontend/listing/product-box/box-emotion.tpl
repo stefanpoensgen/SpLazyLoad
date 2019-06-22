@@ -36,6 +36,14 @@
         {$srcSetRetina = ''}
 
         {foreach $sArticle.image.thumbnails as $image}
+            {$srcSetWebp = "{if $srcSetWebp}{$srcSetWebp}, {/if}{$image.webp.source} {$image.maxWidth}w"}
+
+            {if $image.retinaSource}
+                {$srcSetRetinaWebp = "{if $srcSetRetina}{$srcSetRetinaWebp}, {/if}{$image.webp.retinaSource} {$image.maxWidth * 2}w"}
+            {/if}
+        {/foreach}
+
+        {foreach $sArticle.image.thumbnails as $image}
             {$srcSet = "{if $srcSet}{$srcSet}, {/if}{$image.source} {$image.maxWidth}w"}
 
             {if $image.retinaSource}
@@ -44,13 +52,21 @@
         {/foreach}
 
         <picture>
+            <source sizes="{$itemSize}" data-srcset="{$srcSetRetinaWebp}" media="(min-resolution: 192dpi)" type="image/webp"/>
+            <source sizes="{$itemSize}" data-srcset="{$srcSetWebp}" type="image/webp"/>
             <source sizes="{$itemSize}" data-srcset="{$srcSetRetina}" media="(min-resolution: 192dpi)" />
             <source sizes="{$itemSize}" data-srcset="{$srcSet}" />
 
-            <img data-src="{$sArticle.image.thumbnails[0].source}" class="lazyload" alt="{$desc|strip_tags|truncate:160}" />
+
+    {if isset($sArticle.image.thumbnails[0].webp)}
+        <source data-srcset="{$sArticle.image.thumbnails[0].webp.source}" alt="{$desc|strip_tags|truncate:160}" type="image/webp"/>
+    {/if}
+        <img data-src="{$sArticle.image.thumbnails[0].source}" class="lazyload" alt="{$desc|strip_tags|truncate:160}" />
+
         </picture>
 
     {elseif $sArticle.image.source}
+        <img data-src="{$sArticle.image.webp.source}" class="lazyload" alt="{$desc|strip_tags|truncate:160}" type="image/webp"/>
         <img data-src="{$sArticle.image.source}" class="lazyload" alt="{$desc|strip_tags|truncate:160}" />
     {else}
         <img data-src="{link file='frontend/_public/src/img/no-picture.jpg'}" class="lazyload" alt="{$desc|strip_tags|truncate:160}" />

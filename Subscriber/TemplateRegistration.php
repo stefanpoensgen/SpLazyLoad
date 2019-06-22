@@ -4,6 +4,7 @@ namespace SpLazyLoad\Subscriber;
 
 use Doctrine\Common\Collections\ArrayCollection;
 use Enlight\Event\SubscriberInterface;
+use Shopware\Bundle\PluginInstallerBundle\Service\InstallerService;
 
 class TemplateRegistration implements SubscriberInterface
 {
@@ -18,15 +19,22 @@ class TemplateRegistration implements SubscriberInterface
     private $pluginConfig;
 
     /**
+     * @var InstallerService
+     */
+    private $pluginManager;
+
+    /**
      * TemplateRegistration constructor.
      *
-     * @param string $pluginDir
-     * @param array  $pluginConfig
+     * @param string           $pluginDir
+     * @param array            $pluginConfig
+     * @param InstallerService $pluginManager
      */
-    public function __construct(string $pluginDir, array $pluginConfig)
+    public function __construct($pluginDir, array $pluginConfig, InstallerService $pluginManager)
     {
         $this->pluginDir = $pluginDir;
         $this->pluginConfig = $pluginConfig;
+        $this->pluginManager = $pluginManager;
     }
 
     /**
@@ -46,7 +54,17 @@ class TemplateRegistration implements SubscriberInterface
     public function onTemplateDirectoriesCollect(\Enlight_Event_EventArgs $args)
     {
         $dirs = $args->getReturn();
-        $dirs[] = $this->pluginDir . '/Resources/views/';
+
+        try {
+            $plugin = $this->pluginManager->getPluginByName('FroshWebP');
+            if ($plugin->getActive()) {
+                $dirs[] = $this->pluginDir . '/Resources/FroshWebP/views/';
+            } else {
+                $dirs[] = $this->pluginDir . '/Resources/views/';
+            }
+        } catch (\Exception $e) {
+            $dirs[] = $this->pluginDir . '/Resources/views/';
+        }
 
         $args->setReturn($dirs);
     }
