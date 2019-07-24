@@ -18,7 +18,8 @@
                 {if isset($sArticle.preview.thumbnails[1].webp)}
                     <source data-srcset="{$sArticle.preview.thumbnails[1].webp.sourceSet}" type="image/webp">
                 {/if}
-                <img data-srcset="{$sArticle.preview.thumbnails[1].sourceSet}"
+                <img src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="
+                     data-srcset="{$sArticle.preview.thumbnails[1].sourceSet}"
                      data-src="{$sArticle.preview.thumbnails[1].source}"
                      class="lazyload blog--image panel has--border is--rounded"
                      alt="{$alt}"
@@ -49,7 +50,8 @@
                         {if isset($sArticleMedia.thumbnails[0].webp)}
                             <source data-srcset="{$sArticleMedia.thumbnails[0].webp.sourceSet}" type="image/webp">
                         {/if}
-                        <img data-srcset="{$sArticleMedia.thumbnails[0].sourceSet}"
+                        <img src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="
+                             data-srcset="{$sArticleMedia.thumbnails[0].sourceSet}"
                              class="lazyload blog--thumbnail-image"
                              alt="{s name="BlogThumbnailText" namespace="frontend/blog/detail"}{/s}: {$alt}"
                              title="{s name="BlogThumbnailText" namespace="frontend/blog/detail"}{/s}: {$alt|truncate:160}" />
