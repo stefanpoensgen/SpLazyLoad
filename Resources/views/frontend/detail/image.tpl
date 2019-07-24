@@ -20,7 +20,8 @@
             <span class="image--media">
                 {if isset($sArticle.image.thumbnails)}
                     {block name='frontend_detail_image_default_picture_element'}
-                        <img data-srcset="{$sArticle.image.thumbnails[1].sourceSet}"
+                        <img src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="
+                             data-srcset="{$sArticle.image.thumbnails[1].sourceSet}"
                              data-src="{$sArticle.image.thumbnails[1].source}"
                              class="lazyload"
                              alt="{$alt}"
@@ -28,7 +29,7 @@
                     {/block}
                 {else}
                     {block name='frontend_detail_image_fallback'}
-                        <img data-src="{link file='frontend/_public/src/img/no-picture.jpg'}" class="lazyload" alt="{$alt}" itemprop="image" />
+                        <img src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-src="{link file='frontend/_public/src/img/no-picture.jpg'}" class="lazyload" alt="{$alt}" itemprop="image" />
                     {/block}
                 {/if}
             </span>
@@ -37,9 +38,9 @@
 {/block}
 
 {block name='frontend_detail_images_picture_element'}
-    <img data-srcset="{$image.thumbnails[1].sourceSet}" class="lazyload" alt="{$alt}" itemprop="image" />
+    <img src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-srcset="{$image.thumbnails[1].sourceSet}" class="lazyload" alt="{$alt}" itemprop="image" />
 {/block}
 
 {block name='frontend_detail_images_fallback'}
-    <img data-src="{link file='frontend/_public/src/img/no-picture.jpg'}" class="lazyload" alt="{$alt}" itemprop="image" />
+    <img src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-src="{link file='frontend/_public/src/img/no-picture.jpg'}" class="lazyload" alt="{$alt}" itemprop="image" />
 {/block}

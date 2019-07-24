@@ -7,7 +7,7 @@
         {/if}
         <source data-srcset="{$sBanner.media.thumbnails[1].sourceSet}" media="(min-width: 48em)">
 
-        <img data-srcset="{$sBanner.media.thumbnails[0].sourceSet}" alt="{$sBanner.description|escape}" class="lazyload banner--img" />
+        <img src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-srcset="{$sBanner.media.thumbnails[0].sourceSet}" alt="{$sBanner.description|escape}" class="lazyload banner--img" />
     </picture>
 {/block}
 
@@ -21,7 +21,7 @@
 
             <source data-srcset="{$sBanner.media.thumbnails[1].sourceSet}" media="(min-width: 48em)">
 
-            <img data-srcset="{$sBanner.media.thumbnails[0].sourceSet}" alt="{$sBanner.description|escape}" class="lazyload banner--img" />
+            <img src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-srcset="{$sBanner.media.thumbnails[0].sourceSet}" alt="{$sBanner.description|escape}" class="lazyload banner--img" />
         </picture>
     </a>
 {/block}

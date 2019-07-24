@@ -47,12 +47,12 @@
             <source sizes="{$itemSize}" data-srcset="{$srcSetRetina}" media="(min-resolution: 192dpi)" />
             <source sizes="{$itemSize}" data-srcset="{$srcSet}" />
 
-            <img data-src="{$sArticle.image.thumbnails[0].source}" class="lazyload" alt="{$desc|strip_tags|truncate:160}" />
+            <img src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-src="{$sArticle.image.thumbnails[0].source}" class="lazyload" alt="{$desc|strip_tags|truncate:160}" />
         </picture>
 
     {elseif $sArticle.image.source}
-        <img data-src="{$sArticle.image.source}" class="lazyload" alt="{$desc|strip_tags|truncate:160}" />
+        <img src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-src="{$sArticle.image.source}" class="lazyload" alt="{$desc|strip_tags|truncate:160}" />
     {else}
-        <img data-src="{link file='frontend/_public/src/img/no-picture.jpg'}" class="lazyload" alt="{$desc|strip_tags|truncate:160}" />
+        <img src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-src="{link file='frontend/_public/src/img/no-picture.jpg'}" class="lazyload" alt="{$desc|strip_tags|truncate:160}" />
     {/if}
 {/block}

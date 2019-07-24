@@ -35,7 +35,8 @@
         {$baseSource = $banner.source}
     {/if}
 
-    <img data-src="{$baseSource}"
+    <img src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="
+         data-src="{$baseSource}"
          class="lazyload banner-slider--image"
          {if $srcSet}sizes="{$itemSize}" srcset="{$srcSet}"{/if}
         {if $banner.altText}alt="{$banner.altText|escape}" {/if}/>
