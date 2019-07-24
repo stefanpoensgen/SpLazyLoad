@@ -61,14 +61,14 @@
     {if isset($sArticle.image.thumbnails[0].webp)}
         <source data-srcset="{$sArticle.image.thumbnails[0].webp.source}" alt="{$desc|strip_tags|truncate:160}" type="image/webp"/>
     {/if}
-        <img data-src="{$sArticle.image.thumbnails[0].source}" class="lazyload" alt="{$desc|strip_tags|truncate:160}" />
+        <img data-src="{$sArticle.image.thumbnails[0].source}" class="lazyload" loading="lazy" alt="{$desc|strip_tags|truncate:160}" />
 
         </picture>
 
     {elseif $sArticle.image.source}
-        <img data-src="{$sArticle.image.webp.source}" class="lazyload" alt="{$desc|strip_tags|truncate:160}" type="image/webp"/>
-        <img data-src="{$sArticle.image.source}" class="lazyload" alt="{$desc|strip_tags|truncate:160}" />
+        <img data-src="{$sArticle.image.webp.source}" class="lazyload" loading="lazy" alt="{$desc|strip_tags|truncate:160}" type="image/webp"/>
+        <img data-src="{$sArticle.image.source}" class="lazyload" loading="lazy" alt="{$desc|strip_tags|truncate:160}" />
     {else}
-        <img data-src="{link file='frontend/_public/src/img/no-picture.jpg'}" class="lazyload" alt="{$desc|strip_tags|truncate:160}" />
+        <img data-src="{link file='frontend/_public/src/img/no-picture.jpg'}" class="lazyload" loading="lazy" alt="{$desc|strip_tags|truncate:160}" />
     {/if}
 {/block}

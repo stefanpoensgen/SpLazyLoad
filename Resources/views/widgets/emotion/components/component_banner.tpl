@@ -39,6 +39,6 @@
         <source sizes="{$itemSize}" data-srcset="{$srcSet}">
 
         {* Fallback *}
-        <img data-src="{$baseSource}" {if $retinaBaseSource}srcset="{$retinaBaseSource} 2x"{/if} class="lazyload banner--image-src"{if $Data.title} alt="{$Data.title|escape}"{/if} />
+        <img data-src="{$baseSource}" {if $retinaBaseSource}srcset="{$retinaBaseSource} 2x"{/if} class="lazyload banner--image-src"{if $Data.title} alt="{$Data.title|escape}"{/if} loading="lazy" />
     </picture>
 {/block}

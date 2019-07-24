@@ -23,12 +23,13 @@
                         <img data-srcset="{$sArticle.image.thumbnails[1].sourceSet}"
                              data-src="{$sArticle.image.thumbnails[1].source}"
                              class="lazyload"
+                             loading="lazy"
                              alt="{$alt}"
                              itemprop="image" />
                     {/block}
                 {else}
                     {block name='frontend_detail_image_fallback'}
-                        <img data-src="{link file='frontend/_public/src/img/no-picture.jpg'}" class="lazyload" alt="{$alt}" itemprop="image" />
+                        <img data-src="{link file='frontend/_public/src/img/no-picture.jpg'}" class="lazyload" loading="lazy" alt="{$alt}" itemprop="image" />
                     {/block}
                 {/if}
             </span>
@@ -37,9 +38,9 @@
 {/block}
 
 {block name='frontend_detail_images_picture_element'}
-    <img data-srcset="{$image.thumbnails[1].sourceSet}" class="lazyload" alt="{$alt}" itemprop="image" />
+    <img data-srcset="{$image.thumbnails[1].sourceSet}" class="lazyload" loading="lazy" alt="{$alt}" itemprop="image" />
 {/block}
 
 {block name='frontend_detail_images_fallback'}
-    <img data-src="{link file='frontend/_public/src/img/no-picture.jpg'}" class="lazyload" alt="{$alt}" itemprop="image" />
+    <img data-src="{link file='frontend/_public/src/img/no-picture.jpg'}" class="lazyload" loading="lazy" alt="{$alt}" itemprop="image" />
 {/block}

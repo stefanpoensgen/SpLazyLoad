@@ -4,7 +4,7 @@
     <picture>
         <source data-srcset="{$sBanner.media.thumbnails[1].sourceSet}" media="(min-width: 48em)">
 
-        <img data-srcset="{$sBanner.media.thumbnails[0].sourceSet}" alt="{$sBanner.description|escape}" class="lazyload banner--img" />
+        <img data-srcset="{$sBanner.media.thumbnails[0].sourceSet}" alt="{$sBanner.description|escape}" class="lazyload banner--img" loading="lazy" />
     </picture>
 {/block}
 
@@ -13,7 +13,7 @@
         <picture>
             <source data-srcset="{$sBanner.media.thumbnails[1].sourceSet}" media="(min-width: 48em)">
 
-            <img data-srcset="{$sBanner.media.thumbnails[0].sourceSet}" alt="{$sBanner.description|escape}" class="lazyload banner--img" />
+            <img data-srcset="{$sBanner.media.thumbnails[0].sourceSet}" alt="{$sBanner.description|escape}" class="lazyload banner--img" loading="lazy" />
         </picture>
     </a>
 {/block}

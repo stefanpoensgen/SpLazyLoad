@@ -18,6 +18,7 @@
                 {/if}
                 <img data-srcset="{$sArticle.image.thumbnails[1].sourceSet}"
                      class="lazyload"
+                     loading="lazy"
                      alt="{$desc}"
                      title="{$desc|truncate:160}"/>
             </picture>
@@ -25,6 +26,7 @@
         {else}
             <img data-src="{link file='frontend/_public/src/img/no-picture.jpg'}"
                  class="lazyload"
+                 loading="lazy"
                  alt="{$desc}"
                  title="{$desc|truncate:160}"/>
         {/if}
