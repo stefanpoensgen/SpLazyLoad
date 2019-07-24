@@ -17,10 +17,10 @@
                     {if isset($image.thumbnails[0].webp)}
                         <source data-srcset="{$image.thumbnails[0].webp.sourceSet}" type="image/webp">
                     {/if}
-                    <img src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-srcset="{$image.thumbnails[0].sourceSet}" class="lazyload" alt="{$alt}" title="{$alt|truncate:160}" />
+                    <img src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-srcset="{$image.thumbnails[0].sourceSet}" class="lazyload" loading="lazy" alt="{$alt}" title="{$alt|truncate:160}" />
                 {else}
                     {block name='frontend_detail_image_fallback'}
-                        <img src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-src="{link file='frontend/_public/src/img/no-picture.jpg'}" class="lazyload" alt="{$alt}" title="{$alt|truncate:160}" />
+                        <img src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-src="{link file='frontend/_public/src/img/no-picture.jpg'}" class="lazyload" loading="lazy" alt="{$alt}" title="{$alt|truncate:160}" />
                     {/block}
                 {/if}
             </span>

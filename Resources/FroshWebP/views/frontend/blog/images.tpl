@@ -22,6 +22,7 @@
                      data-srcset="{$sArticle.preview.thumbnails[1].sourceSet}"
                      data-src="{$sArticle.preview.thumbnails[1].source}"
                      class="lazyload blog--image panel has--border is--rounded"
+                     loading="lazy"
                      alt="{$alt}"
                      title="{$alt|truncate:160}"
                      itemprop="image" />
@@ -53,6 +54,7 @@
                         <img src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="
                              data-srcset="{$sArticleMedia.thumbnails[0].sourceSet}"
                              class="lazyload blog--thumbnail-image"
+                             loading="lazy"
                              alt="{s name="BlogThumbnailText" namespace="frontend/blog/detail"}{/s}: {$alt}"
                              title="{s name="BlogThumbnailText" namespace="frontend/blog/detail"}{/s}: {$alt|truncate:160}" />
                     </picture>

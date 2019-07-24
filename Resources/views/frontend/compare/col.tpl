@@ -18,6 +18,7 @@
                         <img src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="
                              data-srcset="{$sArticle.image.thumbnails[0].sourceSet}"
                              class="lazyload"
+                             loading="lazy"
                              alt="{$desc}"
                              title="{$desc|truncate:160}" />
                     {else}
@@ -25,6 +26,7 @@
                         <img src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="
                              data-src="{link file='frontend/_public/src/img/no-picture.jpg'}"
                              class="lazyload"
+                             loading="lazy"
                              alt="{$desc}"
                              title="{$desc|truncate:160}" />
                     {/if}

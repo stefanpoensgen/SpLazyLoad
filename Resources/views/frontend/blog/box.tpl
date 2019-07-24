@@ -10,12 +10,14 @@
                     <img src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="
                          data-srcset="{$sArticle.media.thumbnails[0].sourceSet}"
                          class="lazyload"
+                         loading="lazy"
                          alt="{$sArticle.title|escape}"
                          title="{$sArticle.title|escape|truncate:160}" />
                 {else}
                     <img src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="
                          data-src="{media path=$sArticle.media[0].media.path}"
                          class="lazyload"
+                         loading="lazy"
                          alt="{$sArticle.title|escape}"
                          title="{$sArticle.title|escape|truncate:160}" />
                 {/if}
