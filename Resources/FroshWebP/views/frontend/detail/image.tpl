@@ -30,13 +30,14 @@
                                  data-srcset="{$sArticle.image.thumbnails[1].sourceSet}"
                                  data-src="{$sArticle.image.thumbnails[1].source}"
                                  class="lazyload"
+                                 loading="lazy"
                                  alt="{$alt}"
                                  itemprop="image" />
                         </picture>
                     {/block}
                 {else}
                     {block name='frontend_detail_image_fallback'}
-                    <img src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-src="{link file='frontend/_public/src/img/no-picture.jpg'}" class="lazyload" alt="{$alt}" itemprop="image" />
+                    <img src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-src="{link file='frontend/_public/src/img/no-picture.jpg'}" class="lazyload" loading="lazy" alt="{$alt}" itemprop="image" />
                 {/block}
                 {/if}
             </span>
@@ -49,10 +50,10 @@
         {if isset($image.thumbnails[1].webp)}
             <source data-srcset="{$image.thumbnails[1].webp.sourceSet}" type="image/webp">
         {/if}
-        <img src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-srcset="{$image.thumbnails[1].sourceSet}" class="lazyload" alt="{$alt}" itemprop="image" />
+        <img src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-srcset="{$image.thumbnails[1].sourceSet}" class="lazyload" loading="lazy" alt="{$alt}" itemprop="image" />
     </picture>
 {/block}
 
 {block name='frontend_detail_images_fallback'}
-    <img src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-src="{link file='frontend/_public/src/img/no-picture.jpg'}" class="lazyload" alt="{$alt}" itemprop="image" />
+    <img src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-src="{link file='frontend/_public/src/img/no-picture.jpg'}" class="lazyload" loading="lazy" alt="{$alt}" itemprop="image" />
 {/block}
