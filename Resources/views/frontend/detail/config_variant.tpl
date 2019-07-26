@@ -4,9 +4,9 @@
     <span class="image--element">
         <span class="image--media">
             {if isset($media.thumbnails)}
-                <img data-srcset="{$media.thumbnails[0].sourceSet}" class="lazyload" loading="lazy" alt="{$option.optionname}" />
+                <img src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-srcset="{$media.thumbnails[0].sourceSet}" class="lazyload" loading="lazy" alt="{$option.optionname}" />
             {else}
-                <img data-src="{link file='frontend/_public/src/img/no-picture.jpg'}" class="lazyload" loading="lazy" alt="{$option.optionname}">
+                <img src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-src="{link file='frontend/_public/src/img/no-picture.jpg'}" class="lazyload" loading="lazy" alt="{$option.optionname}">
             {/if}
         </span>
     </span>

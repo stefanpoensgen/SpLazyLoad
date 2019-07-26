@@ -16,7 +16,8 @@
                 {if isset($sArticle.image.thumbnails[1].webp)}
                     <source data-srcset="{$sArticle.image.thumbnails[1].webp.sourceSet}" type="image/webp">
                 {/if}
-                <img data-srcset="{$sArticle.image.thumbnails[1].sourceSet}"
+                <img src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="
+                     data-srcset="{$sArticle.image.thumbnails[1].sourceSet}"
                      class="lazyload"
                      loading="lazy"
                      alt="{$desc}"
@@ -24,7 +25,8 @@
             </picture>
             {/block}
         {else}
-            <img data-src="{link file='frontend/_public/src/img/no-picture.jpg'}"
+            <img src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="
+                 data-src="{link file='frontend/_public/src/img/no-picture.jpg'}"
                  class="lazyload"
                  loading="lazy"
                  alt="{$desc}"

@@ -16,7 +16,8 @@
                     {if isset($sArticle.image.thumbnails[0].webp)}
                         <source data-srcset="{$sArticle.image.thumbnails[0].webp.sourceSet}" type="image/webp">
                     {/if}
-                    <img data-srcset="{$sArticle.image.thumbnails[0].sourceSet}"
+                    <img src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="
+                         data-srcset="{$sArticle.image.thumbnails[0].sourceSet}"
                          class="lazyload"
                          loading="lazy"
                          alt="{$desc}"
