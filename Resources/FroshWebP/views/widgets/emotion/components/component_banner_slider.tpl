@@ -43,6 +43,7 @@
         {/if}
         <img data-src="{$baseSource}"
              class="lazyload banner-slider--image"
+             loading="lazy"
              {if $srcSet}sizes="{$itemSize}" srcset="{$srcSet}"{/if}
                 {if $banner.altText}alt="{$banner.altText|escape}" {/if}/>
     </picture>

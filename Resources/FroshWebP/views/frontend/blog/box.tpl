@@ -13,12 +13,14 @@
                         {/if}
                         <img data-srcset="{$sArticle.media.thumbnails[0].sourceSet}"
                              class="lazyload"
+                             loading="lazy"
                              alt="{$sArticle.title|escape}"
                              title="{$sArticle.title|escape|truncate:160}" />
                     </picture>
                 {else}
                     <img data-src="{link file='frontend/_public/src/img/no-picture.jpg'}"
                          class="lazyload"
+                         loading="lazy"
                          alt="{$sArticle.title|escape}"
                          title="{$sArticle.title|escape|truncate:160}" />
                 {/if}

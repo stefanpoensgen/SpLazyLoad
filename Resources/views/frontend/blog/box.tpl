@@ -9,11 +9,13 @@
                 {if isset($sArticle.media.thumbnails)}
                     <img data-srcset="{$sArticle.media.thumbnails[0].sourceSet}"
                          class="lazyload"
+                         loading="lazy"
                          alt="{$sArticle.title|escape}"
                          title="{$sArticle.title|escape|truncate:160}" />
                 {else}
                     <img data-src="{media path=$sArticle.media[0].media.path}"
                          class="lazyload"
+                         loading="lazy"
                          alt="{$sArticle.title|escape}"
                          title="{$sArticle.title|escape|truncate:160}" />
                 {/if}
