@@ -20,7 +20,6 @@
             {/if}
 
             <source data-srcset="{$sBanner.media.thumbnails[1].sourceSet}" media="(min-width: 48em)">
-
             <img src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-srcset="{$sBanner.media.thumbnails[0].sourceSet}" alt="{$sBanner.description|escape}" class="lazyload banner--img" loading="lazy" />
         </picture>
     </a>
