@@ -20,4 +20,13 @@
         <changes lang="de">FroshWebP support. Update lazysizes 5.1.0</changes>
         <changes lang="en">Add FroshWebP support. Update lazysizes 5.1.0</changes>
     </changelog>
+
+    <changelog version="1.1.1">
+        <changes lang="en">
+            fix typo (data-rcset vs. data-srcset)
+            prevent broken image symbol while using alt attribute (see https://github.com/aFarkas/lazysizes#broken-image-symbol)
+            add native lazyloading for browsers that support it (see https://github.com/aFarkas/lazysizes/tree/master/plugins/native-loading)
+            add plugins ls.parent-fit, ls.object-fit, ls.bgset, ls.attrchange
+        </changes>
+    </changelog>
 </plugin>
